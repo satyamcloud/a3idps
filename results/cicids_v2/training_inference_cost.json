@@ -1,0 +1,81 @@
+{
+ "eps_pgd": 0.1,
+ "eps_max": 0.05,
+ "stages": {
+  "pgd_at_training": {
+   "seconds": 667.1,
+   "epochs_run": 53
+  },
+  "a3idps_teacher": {
+   "seconds": 76.9,
+   "epochs_run": 19
+  },
+  "a3idps_distillation": {
+   "seconds": 108.6,
+   "epochs_run": 25
+  },
+  "a3idps_feedback_rounds": [
+   {
+    "round": 1,
+    "generator_seconds": 7.9,
+    "classifier_seconds": 82.6,
+    "classifier_epochs_run": 18
+   },
+   {
+    "round": 2,
+    "generator_seconds": 7.7,
+    "classifier_seconds": 92.0,
+    "classifier_epochs_run": 20
+   },
+   {
+    "round": 3,
+    "generator_seconds": 7.7,
+    "classifier_seconds": 64.2,
+    "classifier_epochs_run": 14
+   },
+   {
+    "round": 4,
+    "generator_seconds": 7.5,
+    "classifier_seconds": 59.8,
+    "classifier_epochs_run": 13
+   },
+   {
+    "round": 5,
+    "generator_seconds": 7.7,
+    "classifier_seconds": 57.6,
+    "classifier_epochs_run": 13
+   }
+  ]
+ },
+ "totals": {
+  "pgd_at_seconds": 667.1,
+  "a3idps_full_pipeline_seconds": 580.2,
+  "a3idps_to_pgd_at_ratio": 0.87
+ },
+ "inference": {
+  "undefended": {
+   "seconds_per_pass": 0.7820967197418213,
+   "std_seconds": 0.9248596639430633,
+   "n_samples": 378016,
+   "ms_per_1000_samples": 2.0689513664549155
+  },
+  "fgsm_at": {
+   "seconds_per_pass": 0.44420657157897947,
+   "std_seconds": 0.24622205676170422,
+   "n_samples": 378016,
+   "ms_per_1000_samples": 1.1750999205826724
+  },
+  "pgd_at": {
+   "seconds_per_pass": 0.44493780136108396,
+   "std_seconds": 0.24369204559336322,
+   "n_samples": 378016,
+   "ms_per_1000_samples": 1.1770343090268243
+  },
+  "kd_feedback_r5": {
+   "seconds_per_pass": 0.4461234092712402,
+   "std_seconds": 0.2481163158377222,
+   "n_samples": 378016,
+   "ms_per_1000_samples": 1.1801707051321644
+  }
+ }
+}
