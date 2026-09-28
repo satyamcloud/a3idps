@@ -1,0 +1,7 @@
+tensorflow>=2.15
+numpy
+scikit-learn
+imbalanced-learn
+shap
+matplotlib
+adversarial-robustness-toolbox
